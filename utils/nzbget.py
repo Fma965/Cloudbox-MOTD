@@ -4,7 +4,7 @@ from .xmlrpc import ServerProxy
 
 class Nzbget:
     def __init__(self, url):
-        self.url = "%s/xmlrpc" % url
+        self.url = "%s/xmlrpc/status" % url
         self.xmlrpc = ServerProxy(self.url)
 
     def get_download_total(self):
